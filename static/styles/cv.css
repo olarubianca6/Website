@@ -1,0 +1,68 @@
+.cv_div {
+  display: grid;
+  padding-left: 50px;
+  padding-right: 40px;
+}
+
+.my_cv {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+}
+
+.cv_left {
+  display: flex;
+  flex-direction: column;
+}
+
+.cv_right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: solid 3px;
+  padding-left: 15px;
+}
+
+.download_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.download_btn {
+  margin-right: 50px;
+  border: solid 1px;
+  font-family: Open Sans, Arial;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 40px;
+  text-decoration: none;
+  color: rgb(212, 212, 212);
+  height: fit-content;
+  padding: 5px;
+}
+
+.list_none {
+  list-style: none;
+}
+
+.list_disc {
+  list-style: disc;
+}
+
+body {
+  background-color: rgb(63, 63, 63);
+  font-family: Open Sans, Arial;
+  color: rgb(212, 212, 212);
+}
+
+section {
+  padding: 10px;
+}
+
+ul {
+  list-style: circle;
+}

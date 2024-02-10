@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bianca Olaru - Contact</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+
+    <div class="header">
+        <div class="left_side">
+            <p class="title">CONTACT</p>
+        </div>
+        
+        <div class="middle_side">
+            <button class="header_button">
+                <a class="link" href="home.html">HOME</a>
+            </button>
+            <button class="header_button">
+                <a class="link" href="cv.html">CV</a>
+            </button>
+            <button class="header_button">
+                <a class="link" href="contact.html">CONTACT</a>
+            </button>
+        </div>
+
+        <div class="right_side">
+            <button class="social_button">
+                <a class="link" href="https://github.com/olarubianca6" target=”_blank”>
+                    <img class="git_img" src="{{ url_for('static', filename='images/github.png') }}"></a>
+            </button>
+            <button class="social_button">
+                <a class="link" 
+                href="https://www.linkedin.com/in/bianca-olaru-23793a16a/" target=”_blank”>
+                    <img class="in_img" src="{{ url_for('static', filename='images/linkedin.svg') }}"></a>
+            </button>
+        </div>
+    </div>
+    <div class="container_1">
+        <div class="container_2">
+            <div class="main">
+                <div class="info">
+                    <p>EMAIL:</p>
+                    <p>olaru.bianca@yahoo.com</p>
+                </div>
+            
+                <div class="contact_form_div">
+                    <p style="font-weight: 600;">CONTACT ME:</p>
+                    <form class="contact_form" action="#" method="post">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                        <button class="submit_button" type="submit">Submit</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>

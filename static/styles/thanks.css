@@ -1,0 +1,46 @@
+.thanks {
+  font-family: Open Sans, Arial;
+  font-size: 15px;
+  display: grid;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  width: fit-content;
+  color: rgb(212, 212, 212);
+}
+
+.main {
+  background-color: rgb(63, 63, 63);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 580px;
+  width: 400px;
+}
+
+.return_btn {
+  border: solid 1px;
+  margin-left: 30px;
+  font-family: Open Sans, Arial;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 40px;
+  text-decoration: none;
+  color: rgb(212, 212, 212);
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+  background-color: rgb(63, 63, 63);
+  padding: none;
+}
+
+body {
+	background-color: rgb(63, 63, 63);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}

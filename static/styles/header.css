@@ -1,0 +1,101 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  margin-top: 0px;
+  margin-left: 0px;
+  background-color: rgb(63, 63, 63);
+  border-bottom: solid 1px #232323;
+  padding-right: 10px;
+  padding-left: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  color: rgb(212, 212, 212);
+}
+
+.left_side {
+  font-size: 30px;
+  font-weight: 600;
+  cursor: default;
+}
+
+.middle_side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 110px;
+  padding-right: 100px;
+}
+
+.right_side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_button {
+  margin-right: 50px;
+  border: none;
+  font-family: Open Sans, Arial;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 20%;
+  height: 40px;
+  background-color: rgb(63, 63, 63);
+}
+
+.header_button:hover {
+  background-color: rgb(77, 77, 77);
+}
+
+.header_button:active {
+  background-color: rgb(96, 96, 96);
+}
+
+.social_button {
+  border: none;
+  background-color: rgb(63, 63, 63);
+  cursor: pointer;
+  border-radius: 20%;
+  margin-right: 10px;
+  height: 40px;
+}
+
+.social_button:hover {
+  background-color: rgb(77, 77, 77);
+}
+
+
+.social_button:active {
+  background-color: rgb(96, 96, 96);
+}
+
+.git_img{
+  height: 30px;
+}
+
+.in_img {
+  height: 15px;
+}
+
+.link {
+  color: rgb(212, 212, 212);
+  text-decoration: none;
+}
+
+.title {
+    font-size: 2vw;
+    width: 250px;
+}
+
+head, body {
+  color: rgb(212, 212, 212);
+}
