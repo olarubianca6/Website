@@ -39,8 +39,9 @@ my_cv.add_about(['Motivated, adaptable and responsible professional looking '
                 'to make a career change in IT because '
                 'I enjoy learning new things and engaging in new opportunities. ', 
                 'My hobbies include reading, yoga, swimming and hiking.'])
-my_cv.add_skills(['Fast learner', 'Problem-solver', 'Positive attitude',
-                  'Highly organised', 'Knowledge of Python, JavaScript, HTML, SQL',
+my_cv.add_skills(['Python (Selenium, Django, Flask and others)',
+                  'JavaScript, React, Typescript', 'HTML, CSS', 'Fast learner',
+                  'Problem-solver', 'Positive attitude', 'Highly organised',
                   'Project management', 'Marketing and brand management',
                   'Event planning and management', 'Customer service'])
 
@@ -58,7 +59,7 @@ my_cv.add_education('BSc Events Management', 'Canterbury Christ Church Universit
                                             'and problem-solving skills through both a theoretical and practical approach.')
 
 
-my_cv.add_experience('Bookseller', 'One Distribution Company', '2021 - present', 'Iasi, RO',
+my_cv.add_experience('Assistant Manager', 'One Distribution Company', '2021 - present', 'Iasi, RO',
                      [
                          'Welcomed customers, addressed enquiries and provided information to promote positive communications and excellent service.',
                          'Managed and updated company website.',

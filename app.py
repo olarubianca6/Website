@@ -36,7 +36,7 @@ def save_comment():
 
         fieldnames = ['name', 'email', 'message']
 
-        with open('messages.csv', 'a', newline='') as inFile:
+        with open('files/messages.csv', 'a', newline='') as inFile:
             writer = csv.DictWriter(inFile, fieldnames=fieldnames)
             if inFile.tell() == 0:
                 writer.writeheader()
