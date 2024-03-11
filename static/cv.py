@@ -38,9 +38,8 @@ my_cv = CV('Bianca Olaru', 'olaru.bianca@yahoo.com', '0756089933', 'Iasi, Romani
 my_cv.add_about(['Motivated, adaptable and responsible professional'
                  ' currently studying about software development and machine learning.'
                  ' Experienced in various platforms and languages and passionate'
-                 ' about discovering the latest technologies.',
-                'My other hobbies include reading, yoga, swimming and hiking.'])
-my_cv.add_skills(['Python (Selenium, Django, Flask and others)', 'Postman, REST API'
+                 ' about discovering the latest technologies.'])
+my_cv.add_skills(['Python (Selenium, Django, Flask and others)', 'Postman, REST API',
                   'JavaScript, React, Typescript', 'HTML, CSS', 'Fast learner', 'Highly organised',
                   'Problem-solving', 'Analytical thinking', 'Positive attitude',
                   'Project management', 'Marketing and brand management',
