@@ -10,8 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" 
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
@@ -20,100 +19,105 @@
 
 <py-script src="static/cv.py"> </py-script>
 
-    <div class="header">
-        <div class="left_side">
-            <p class="title">CV</p>
+<div class="header">
+    <div class="left_side">
+        <p class="title">CV</p>
+    </div>
+
+    <div class="middle_side">
+        <button class="header_button">
+            <a class="link" href="home.html">HOME</a>
+        </button>
+        <button class="header_button">
+            <a class="link" href="cv.html">CV</a>
+        </button>
+        <button class="header_button">
+            <a class="link" href="contact.html">CONTACT</a>
+        </button>
+    </div>
+    <div class="right_side">
+        <button class="social_button">
+            <a class="link" href="https://github.com/olarubianca6" target="_blank">
+                <img class="git_img" src="{{ url_for('static', filename='images/github.png') }}">
+            </a>
+        </button>
+        <button class="social_button">
+            <a class="link" href="https://www.linkedin.com/in/bianca-olaru-23793a16a/" target="_blank">
+                <img class="in_img" src="{{ url_for('static', filename='images/linkedin.svg') }}">
+            </a>
+        </button>
+    </div>
+</div>
+<div class="cv_div">
+    <div class="my_cv">
+        <div class="cv_left">
+            <section class="about">
+                <img class="cv_pic" src="static/images/cv-pic.jpeg">
+                <p>Name: {{my_cv.name }}</p>
+                <p>Email: {{ my_cv.email }}</p>
+                <p>Address: {{ my_cv.address }}</p>
+                <br>
+                <ul class="list_none">
+                    {% for p in my_cv.about %}
+                        <li>{{p}}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section class="skills">
+                <h2><strong>Skills</strong></h2>
+                <ul class="list_disc">
+                    {% for skill in my_cv.skills %}
+                        <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+            <section class="languages">
+                <h2><strong>Languages</strong></h2>
+                <ul class="list_disc">
+                    {% for lang in my_cv.languages %}
+                        <li>{{ lang.language }} - {{ lang.level }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
         </div>
-        
-        <div class="middle_side">
-            <button class="header_button">
-                <a class="link" href="home.html">HOME</a>
-            </button>
-            <button class="header_button">
-                <a class="link" href="cv.html">CV</a>
-            </button>
-            <button class="header_button">
-                <a class="link" href="contact.html">CONTACT</a>
-            </button>
-        </div>
-        <div class="right_side">
-            <button class="social_button">
-                <a class="link" href="https://github.com/olarubianca6" target=”_blank”>
-                    <img class="git_img" src="{{ url_for('static', filename='images/github.png') }}"></a>
-            </button>
-            <button class="social_button">
-                <a class="link" 
-                href="https://www.linkedin.com/in/bianca-olaru-23793a16a/" target=”_blank”s>
-                    <img class="in_img" src="{{ url_for('static', filename='images/linkedin.svg') }}"></a>
-            </button>
+        <div class="cv_right">
+            <section class="education">
+                <h2><strong>Education</strong></h2>
+                <ul class="list_none">
+                    {% for edu in my_cv.education %}
+                        <li>
+                            <br><strong>{{ edu.degree }}</strong> - {{ edu.university }} ({{ edu.year }})<br>
+                            {{ edu.location }}<br>
+                            <br>{{ edu.details }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+
+            <section class="experience">
+                <br><h2><strong>Experience</strong></h2>
+                <ul class="list_none">
+                    {% for exp in my_cv.experience %}
+                        <li>
+                            <br><strong>{{ exp.position }}</strong> - {{ exp.company }} ({{ exp.year }})<br>
+                            {{ exp.location }}<br>
+                            <br><ul class="list_disc">
+                                {% for detail in exp.details %}
+                                    <li>{{ detail }}</li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
         </div>
     </div>
-    <div class="cv_div">
-        <div class="my_cv">
-            <div class="cv_left">
-                <section class="about">
-                    <p>Name: {{my_cv.name }}</p>
-                    <p>Email: {{ my_cv.email }}</p>
-                    <p>Address: {{ my_cv.address }}</p>
-                    <br>
-                    <ul class="list_none">
-                        {% for p in my_cv.about%}
-                            <li>{{p}}</li>
-                        {% endfor %}
-                    </ul>
-                </section>
-                <section class="skills">
-                    <h2><strong>Skills</strong></h2>
-                    <ul class="list_disc">
-                        {% for skill in my_cv.skills %}
-                            <li>{{ skill }}</li>
-                        {% endfor %}
-                    </ul>
-                </section>
-                <section class="languages">
-                    <h2><strong>Languages</strong></h2>
-                    <ul class="list_disc">
-                        {% for lang in my_cv.languages %}
-                            <li>{{ lang.language }} - {{ lang.level }}</li>
-                        {% endfor %}
-                    </ul>
-                </section>
-            </div>
-            <div class="cv_right">
-                <section class="education">
-                    <h2><strong>Education</strong></h2>
-                    <ul class="list_none">
-                        {% for edu in my_cv.education %}
-                            <li>
-                                <br><strong>{{ edu.degree }}</strong> - {{ edu.university }} ({{ edu.year }})<br>
-                                {{ edu.location }}<br>
-                                <br>{{ edu.details }}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </section>
-                <section class="experience">
-                    <br><h2><strong>Experience</strong></h2>
-                    <ul class="list_none">
-                        {% for exp in my_cv.experience %}
-                            <li>
-                                <br><strong>{{ exp.position }}</strong> - {{ exp.company }} ({{ exp.year }})<br>
-                                {{ exp.location }}<br>
-                                <br><ul class="list_disc">
-                                    {% for detail in exp.details %}
-                                        <li>{{ detail }}</li>
-                                    {% endfor %}
-                                </ul>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </section>
-            </div>
-        </div>
-        <div class="download_div">
-            <a class="download_btn" href="{{ url_for('static', filename='images/Bianca_Olaru_CV.pdf') }}"
-            download>DOWNLOAD AS PDF</a>
-        </div>
+    <div class="download_div">
+        <a class="download_btn" href="{{ url_for('static', filename='images/BiancaOlaru_CV.pdf') }}" download>
+            DOWNLOAD AS PDF
+        </a>
     </div>
+</div>
+
 </body>
 </html>

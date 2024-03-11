@@ -15,12 +15,18 @@
   flex-direction: column;
 }
 
+.cv_pic {
+  height: 300px;
+  width: 240px;
+  margin-bottom: 30px;
+}
+
 .cv_right {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   border-left: solid 3px;
-  padding-left: 15px;
+  padding-left: 30px;
 }
 
 .download_div {
